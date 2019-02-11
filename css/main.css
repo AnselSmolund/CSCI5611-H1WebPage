@@ -7,6 +7,14 @@
   text-align: center;
   background: rgba(0,0,0,0.4);
 }
-#fire{
+#fire-bench{
   margin-top: 20px;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+}
+#fire{
+  border-top: 2px solid black;
+  padding-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
