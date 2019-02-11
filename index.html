@@ -1,0 +1,117 @@
+<!doctype html>
+<html> <!--<![endif]-->
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="apple-touch-icon" href="apple-touch-icon.png">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="css/main.css">
+
+      <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Particle System</h1>
+        <p> CSCI 5611 Particle System Project Webpage<br> Ansel Smolund <br> Smolu006 </p>
+      </div>
+    </div>
+
+    <div class="container" id = "water-fountain">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Water Fountain Simulation</h2>
+          <p>&nbsp &nbsp For my first particle system, I decided to simulate an arc of water
+             pouring out of the top of a fountain. I downloaded a 3d asset of the fountain
+             online and used a particle system with water textured particles to simulate the water.
+             Each particle was given a negative initial y velocity within a random range, and a
+             positive initial x velocity within a random range. There was also a small z velocity given
+             to each particle to simulate the idea of randomness and potential wind hitting the fountain.
+             One problem that I ran into while creating this particle system was the use of the Sphere() function
+             with many particles being added to the ArrayList. The issue was that Sphere() uses many triangles
+             to create one sphere. This is far too many calculations to run with thousands of particles within the system.
+             To account for this computational limitation, I created a primitive 3d shape, with far fewer triangles than the
+             Sphere() function would call. <br>
+           &nbsp&nbsp The video to the right shows the simulation in action. It shows the 3d navigatable, user-controlled camera of the scene. At 1:20, the
+           video zooms in to show the particles from close up. Below are a few screenshots from the simulation, highlighting some of the key features.</p>
+          <img width = "150" src = "fountain-screenshots/water4.png">
+          <img width = "200" src = "fountain-screenshots/water2.png">
+          <img width = "150" src = "fountain-screenshots/water3.png">
+        </div>
+        <div class="col-md-6">
+          <video width = "500" controls>
+            <source src = "water.mov">
+          </video>
+        </div>
+      </div>
+      <div class = "row">
+        <div class="col-md-6">
+          <h4>Collision Detection</h4>
+          <p>   &nbsp&nbsp One of the more difficult aspects of this simulation was creating a collision detection mechanism with the 3d fountain.
+              In the simulation, you can see that at each level of the fountain, the water particles pool in the bowl and eventually pour out
+              in a realistic fashion. Once the particles hit the floor of the simulation they bounce up in a splashing animation. The
+              photo below diagrams at which points in the model the water particles detect collisions, and react accordingly.</p>
+          <img width = "450" src = "fountain-screenshots/water5.png">
+        </div>
+        <div class="col-md-6">
+          <video width = "500" controls>
+            <source src = "water3.mov">
+          </video>
+        </div>
+      </div>
+      <div class = "row" style = "text-align: center">
+        <div class = "col">
+          <h1> Benchmarks </h1>
+        </div>
+      </div>
+      <div class = "row" id = "fountain-bench">
+        <div class="col-md-4">
+          <h4>500 Particles at 24 FPS</h4>
+          <video width = "300" controls>
+            <source src = "500particles.mov">
+          </video>
+        </div>
+        <div class="col-md-4">
+          <h4>2000 Particles at 30 FPS</h4>
+          <video width = "300" controls>
+            <source src = "2000particles.mov">
+          </video>
+        </div>
+        <div class="col-md-4">
+          <h4>10000 Particles at 30 FPS</h4>
+          <video width = "300" controls>
+            <source src = "10000particles.mov">
+          </video>
+        </div>
+      </div>
+    </div> <!-- /container -->
+    <div class = "container" id = "fire">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Camp Fire Simulation</h2>
+          <p>Donec id elit non mi porta gravida at eget metus.
+            Fusce dapibus, tellus ac cursus commodo,
+            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <img width = "150" src = "fire-screenshots/fire1.png">
+          <img width = "200" src = "fire-screenshots/fire2.png">
+          <img width = "150" src = "fire-screenshots/fire3.png">
+        </div>
+        <div class="col-md-6">
+          <video width = "500" controls>
+            <source src = "fire1.mov">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.jumbotron{
+  text-align: center;
+  background: rgb(0,0,127,0.2);
+}
+#fountain-bench{
+  margin-top: 20px;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+}
+#fire{
+  margin-top: 20px;
+}
