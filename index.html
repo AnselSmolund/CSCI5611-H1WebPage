@@ -126,10 +126,9 @@
             I switch the texture of it to a smoke texture. This adds the effect of a cloud of smoke above the fire to make the simulation more
             realistic.
           </p>
-          <img style = "transform: translateY(-60px)"width = "150" src = "fire-screenshots/fire1.png">
+          <img width = "150" src = "fire-screenshots/fire1.png">
           <img width = "200" src = "fire-screenshots/fire2.png">
           <img width = "150" src = "fire-screenshots/fire3.png">
-          <img style = "transform: translateY(-120px)" width = "150" src = "fire-screenshots/fire7.png">
         </div>
         <div class="col-md-6">
           <video width = "500" controls>
@@ -159,6 +158,30 @@
           <h4>10000 Particles at 30 FPS</h4>
           <video width = "300" controls>
             <source src = "10000fire.mov">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class = "container" id = "snow">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 style = "text-align: center">Snow Simulation</h2>
+          <h4 style = "text-align: center"><a href = "https://github.com/AnselSmolund/snow-simulation-"> Link to Code </a> </h4>
+          <p>
+              &nbsp&nbsp For my final particle system, I decided to simulate snow. This simulation shows
+              <strong> textured particles </strong> that I crafted from a spritesheet of over one thousand different shapes
+              of snowflakes. The hardest part of this simulation was billboarding the image to the angle of the camera rotation.
+              This gives the effect of a 3d snowflake, but in reality it is a 2d image on the screen. I applied two forces to
+              the particles. First, a gravity force, which took into account the size of the snowflake and applied an effect
+              to reflect that mass. Secondly, I added a wind force which is responsive to where the x position of the mouse is.
+              Lastly, there is some perlin noise implemented with each snowflake as it falls to the ground to give off a realistic illusion.
+
+          </p>
+          <img width = "300" src = "snowShot.png"></img>
+        </div>
+        <div class="col-md-6">
+          <video width = "500" controls>
+            <source src = "snow.mov">
           </video>
         </div>
       </div>
