@@ -122,11 +122,14 @@
             each particle depending on their initial location. If the initial x position is to the right of center then
             it will have a higher probability of a negative initial x velocity, and if the initial x position is to the left
             of center it will have a higher probability of a positive initial x velocity. This is implemented to simulate an inward plume that
-            occurs at the top of a real fire. The logs have added context for the simulation to make it more realistic.
+            occurs at the top of a real fire. The logs have added context for the simulation to make it more realistic. When the particle is almost dead,
+            I switch the texture of it to a smoke texture. This adds the effect of a cloud of smoke above the fire to make the simulation more
+            realistic.
           </p>
-          <img width = "150" src = "fire-screenshots/fire1.png">
+          <img style = "transform: translateY(-60px)"width = "150" src = "fire-screenshots/fire1.png">
           <img width = "200" src = "fire-screenshots/fire2.png">
           <img width = "150" src = "fire-screenshots/fire3.png">
+          <img style = "transform: translateY(-120px)" width = "150" src = "fire-screenshots/fire7.png">
         </div>
         <div class="col-md-6">
           <video width = "500" controls>
